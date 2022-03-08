@@ -93,7 +93,7 @@ public class Sketch extends PApplet {
     //showing the time
     fill(0);
     textSize(20);
-    text(+intHour, 250, 50);
+    text(+intHour - 5, 250, 50);
     text(":", 280, 50);
     text(+intMinute, 290, 50);
     text(":", 320, 50);
