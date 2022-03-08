@@ -26,6 +26,16 @@ public class Sketch extends PApplet {
     float randomX3 = random(0, 400);
     float randomY3 = random(0, 400);
     float objectSize = random(25, 250);
+    float objectSize2 = random(25, 250);
+
+    //Variables for setting time in hours, minutes, and seconds
+    int intSecond = second();
+    int intMinute = minute();
+    int intHour = hour();
+
+    
+
+  
   public void setup() {
     background(255);
   }
@@ -59,7 +69,7 @@ public class Sketch extends PApplet {
     }else if (randomX2 > 200 && randomY2 > 200){
       fill(255, 255, 0);
     }
-    ellipse(randomX2, randomY2, objectSize, objectSize);
+    ellipse(randomX2, randomY2, objectSize2, objectSize2);
 
     //Position and Colour (Triangle)
     if(randomX3 < 200 && randomY3 < 200){
@@ -79,6 +89,17 @@ public class Sketch extends PApplet {
 
     fill(0);
     line(0, 200, 400, 200);
+
+    //showing the time
+    fill(0);
+    textSize(20);
+    text(+intHour, 250, 50);
+    text(":", 280, 50);
+    text(+intMinute, 290, 50);
+    text(":", 320, 50);
+    text(+intSecond, 330, 50);
+    
+    
 
     
 
